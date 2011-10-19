@@ -68,7 +68,8 @@
                 '<img src="themes/images/content/content8.jpg" alt="" />'
             ];
             $('#slider').slider({
-                'imgSet'    : imgSet
+                'method': 'hover',
+                'imgSet': imgSet
             }); 
         });
     
