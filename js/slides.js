@@ -21,7 +21,7 @@
                         for(var i = 0 , count = options.imgSet.length; i < count ; i++){
                             ctrlHtml.push(options.imgSet[i]);
                         }
-                        ctrlHtml.push('</div>');
+                        ctrlHtml.push('<div class="clear"></div></div>');
                         ctrlHtml = ctrlHtml.join('');
 
                         slides.css({
