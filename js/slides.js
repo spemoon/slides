@@ -38,8 +38,10 @@
                             }).after(ctrlHtml);
 
                         var btns = $('#ctrl').find('img');
+                        var idx = 0;
                         $('#ctrl').delegate('img',options.method, function() {
                                 var index = btns.index($(this));
+                                idx = index;
                                 switch(options.direction){
                                 case 'vertical' : 
                                     slides.stop().animate({ 'top' : -index * slideH },options.speed);
@@ -49,7 +51,6 @@
                                     slides.css({ 'width' : slideW * len }).stop().animate({ 'left' : -index * slideW } , options.speed);
                                 }
                             });
-                        var idx = 0;
                         var timeInterval = setInterval(function() {
                             var index = ++idx % btns.length;
                             btns.eq(index)[options.method]();
