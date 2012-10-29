@@ -1,0 +1,62 @@
+@import 'less/reset.less';
+@import 'less/base.less';
+
+@width: 900px;
+@height: 400px;
+@imgWidth: 570px;
+@imgHeight: 270px;
+@navWidth: @imgWidth / 3;
+@navHeight: @imgHeight / 3;
+.wrap{
+    position: relative;
+    width: @width;
+    .center;
+    .slide-content{
+        height: @height;
+        width: @width;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        background: #eee;
+        .slide-item{
+            position: relative;
+            height: @height;
+            width: @width;
+            padding-top: 20px;
+            .slide-ct{
+                .center;
+                width: @imgWidth;
+                height: @imgHeight;
+                display: block;
+                clear: both;
+                border: 10px solid #fff;
+                z-index: 100;
+                position: relative;
+            }
+            .pre, .next{
+                position: absolute;
+                top: 180px;
+                left: 30px;
+                width: @navWidth;
+                height: @navHeight;
+                z-index: 1;
+                &:hover{
+                    z-index: 200;
+                    img{
+                        opacity: 0.8;
+                    }
+                }
+                img{
+                    width: @navWidth;
+                    height: @navHeight;   
+                    border: 5px solid #fff;
+                }
+            }
+            .next{
+                left: auto;
+                right: 30px;
+            }
+        }
+    }
+}
